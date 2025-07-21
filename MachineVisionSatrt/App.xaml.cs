@@ -33,7 +33,7 @@ namespace MachineVisionSatrt
             Task.Run(() =>
             {
                 // 模拟耗时操作
-                Thread.Sleep(3000);
+                //Thread.Sleep(1000);
 
                 // 在UI线程上关闭启动画面
                 Dispatcher.Invoke(() =>
