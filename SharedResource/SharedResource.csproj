@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\MachineVision.ico" />
+    <None Remove="Images\StartFlash.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Themes\" />
+    <Folder Include="Languages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\MachineVision.ico" />
+    <Resource Include="Images\StartFlash.jpg" />
+  </ItemGroup>
+
+</Project>
