@@ -11,6 +11,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\ImageProcessing\ImageProcessing.csproj" />
 		<ProjectReference Include="..\SharedResource\SharedResource.csproj" />
 	</ItemGroup>
 

@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MachineVisionSatrt"
+        xmlns:image_process="clr-namespace:ImageProcessing.Controls;assembly=ImageProcessing"
         mc:Ignorable="d"
         MinWidth="1120"
         MinHeight="630"
@@ -43,7 +44,11 @@
                     <!-- 分隔条 -->
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Border Grid.Row="0" Background="LightBlue" Name="TopDisplaybar" Grid.ColumnSpan="2" />
+
+                <Grid Grid.Row="0" Background="LightBlue" Name="TopDisplaybar" Grid.ColumnSpan="2">
+                    <image_process:HalconDisplayControl></image_process:HalconDisplayControl>
+                </Grid>
+
                 <GridSplitter Grid.Row="1"
               HorizontalAlignment="Stretch"
               VerticalAlignment="Stretch"
