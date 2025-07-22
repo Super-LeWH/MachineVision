@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImageProcessing.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +14,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ImageProcessing.Controls
+namespace ImageProcessing.View
 {
     /// <summary>
-    /// HalconDisplayControl.xaml 的交互逻辑
+    /// OperationToolControl.xaml 的交互逻辑
     /// </summary>
-    public partial class HalconDisplayControl : UserControl
+    public partial class OperationToolControl : UserControl
     {
-        public HalconDisplayControl()
+        public OperationToolControl()
         {
             InitializeComponent();
+            this.DataContext = new OperationToolControlViewModel();
         }
     }
 }

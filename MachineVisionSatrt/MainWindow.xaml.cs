@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using MachineVisionSatrt.ViewModel;
+using System.Reflection;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -26,6 +27,8 @@ namespace MachineVisionSatrt
             var parts = version.Split('.');
             var shortFileVersion = string.Join(".", parts.Take(3));
             this.Title = $"MachineVision V{shortFileVersion}";
+            // 数据绑定
+            this.DataContext = new MainWindowViewModel();
         }
     }
 }
