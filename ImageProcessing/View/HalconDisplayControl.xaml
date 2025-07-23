@@ -8,17 +8,79 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="30"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <ToolBarTray Grid.Row="0" Name="ToolBarList">
-            <ToolBar>
-                <Button Content="工具" />
-                <Separator/>
-            </ToolBar>
-        </ToolBarTray>
-        <ha:HSmartWindowControlWPF Name="HalconDisplay" Grid.Row="1">
-        </ha:HSmartWindowControlWPF>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="2"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ToolBarTray Grid.Row="0" Name="ToolBarList">
+                <ToolBar>
+                    <Button Content="工具" />
+                    <Separator/>
+                </ToolBar>
+            </ToolBarTray>
+            <ha:HSmartWindowControlWPF Name="HalconDisplay" Grid.Row="1">
+            </ha:HSmartWindowControlWPF>
+        </Grid>
+        <GridSplitter Grid.Column="1" Width="2" Background="Transparent" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- 上半部分：菜单 -->
+            <Menu Grid.Row="0" Margin="1">
+                <MenuItem Header="图像处理>>">
+                    <MenuItem Header="颜色转换"
+                  Command="{Binding PosMenuClickCommand}"
+                  CommandParameter="颜色转换" />
+                    <MenuItem Header="膨胀"
+                  Command="{Binding PosMenuClickCommand}"
+                  CommandParameter="膨胀"/>
+                    <MenuItem Header="腐蚀"
+                  Command="{Binding PosMenuClickCommand}"
+                  CommandParameter="腐蚀"/>
+                    <MenuItem Header="开运算"
+                  Command="{Binding PosMenuClickCommand}"
+                  CommandParameter="开运算"/>
+                    <MenuItem Header="闭运算"
+                  Command="{Binding PosMenuClickCommand}"
+                  CommandParameter="闭运算"/>
+                    <MenuItem Header="二值化"
+                  Command="{Binding PosMenuClickCommand}"
+                  CommandParameter="二值化"/>
+                    <MenuItem Header="自定义生成"
+                  Command="{Binding PosMenuClickCommand}"
+                  CommandParameter="自定义生成"/>
+                    <MenuItem Header="灰度值缩放"
+                  Command="{Binding PosMenuClickCommand}"
+                  CommandParameter="灰度值缩放"/>
+                    <MenuItem Header="图像相减"
+                  Command="{Binding PosMenuClickCommand}"
+                  CommandParameter="图像相减"/>
+                    <MenuItem Header="图像乘法"
+                  Command="{Binding PosMenuClickCommand}"
+                  CommandParameter="图像乘法"/>
+                    <MenuItem Header="图像反转"
+                  Command="{Binding PosMenuClickCommand}"
+                  CommandParameter="图像反转"/>
+                </MenuItem>
+                <MenuItem Header="其它操作>>">
+                    <MenuItem Header="加载图像"
+                  Command="{Binding LoadImgCommand}"/>
+                </MenuItem>
+            </Menu>
+
+            <!-- 下半部分：记录 -->
+            <ListBox Grid.Row="1"
+         Margin="5"
+         ItemsSource="{Binding OperationLogs}" />
+        </Grid>
     </Grid>
 </UserControl>

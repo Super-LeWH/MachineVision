@@ -1,4 +1,4 @@
-﻿using ImageProcessing.ViewModel;
+﻿using Logging.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,17 +14,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ImageProcessing.View
+namespace Logging.View
 {
     /// <summary>
-    /// OperationToolControl.xaml 的交互逻辑
+    /// LoggingControl.xaml 的交互逻辑
     /// </summary>
-    public partial class OperationToolControl : UserControl
+    public partial class LoggingControl : UserControl
     {
-        public OperationToolControl()
+        public LoggingControl()
         {
             InitializeComponent();
-            this.DataContext = new OperationToolControlViewModel();
+            this.DataContext = LoggingControlViewModelInstance;
         }
+
+        // 可单例或静态公开（保证跨模块访问）
+        public static LoggingControlViewModel LoggingControlViewModelInstance { get; } = new();
     }
 }

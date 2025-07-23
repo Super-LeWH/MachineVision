@@ -12,6 +12,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\ImageProcessing\ImageProcessing.csproj" />
+		<ProjectReference Include="..\Logging\Logging.csproj" />
 		<ProjectReference Include="..\SharedResource\SharedResource.csproj" />
 	</ItemGroup>
 

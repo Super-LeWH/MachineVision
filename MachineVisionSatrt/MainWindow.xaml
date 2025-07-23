@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MachineVisionSatrt"
         xmlns:image_process="clr-namespace:ImageProcessing.View;assembly=ImageProcessing"
+        xmlns:logging="clr-namespace:Logging.View;assembly=Logging"
         mc:Ignorable="d"
         MinWidth="1120"
         MinHeight="630"
@@ -13,7 +14,10 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20"></RowDefinition>
+            <!-- 需要全部都是自动分配，分割条才起作用。 -->
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" FontSize="{StaticResource FontSizeNormal}">
@@ -25,39 +29,21 @@
             </MenuItem>
         </Menu>
         <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"></ColumnDefinition>
-                <ColumnDefinition Width="2"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="3*" />
-                    <RowDefinition Height="2" />
-                    <!-- 分隔条 -->
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-
-                <Grid Grid.Row="0" Background="LightBlue" Name="TopDisplaybar" Grid.ColumnSpan="2">
+            <TabControl SelectedIndex="0" TabStripPlacement="Top">
+                <TabItem Header="工位-1">
                     <image_process:HalconDisplayControl />
-                </Grid>
-
-                <GridSplitter Grid.Row="1"
+                </TabItem>
+                <TabItem Header="工位-2">
+                </TabItem>
+            </TabControl>
+        </Grid>
+        <GridSplitter Grid.Row="2"
               HorizontalAlignment="Stretch"
               VerticalAlignment="Stretch"
               Height="2"
               Background="Transparent"/>
-                <Border Grid.Row="1" Background="#065084" Name="TopLogBar" Grid.ColumnSpan="2" Margin="0,5,0,0" Grid.RowSpan="2" />
-            </Grid>
-            <GridSplitter Grid.Column="1"
-          Width="2"
-          HorizontalAlignment="Stretch"
-          VerticalAlignment="Stretch"
-          Background="Transparent"/>
-
-            <Grid Grid.Column="2" Name="TopToolBar">
-                <image_process:OperationToolControl/>
-            </Grid>
+        <Grid Grid.Row="3">
+            <logging:LoggingControl />
         </Grid>
     </Grid>
 </Window>

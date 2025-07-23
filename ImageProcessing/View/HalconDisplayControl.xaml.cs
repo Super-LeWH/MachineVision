@@ -28,8 +28,9 @@ namespace ImageProcessing.View
         public HalconDisplayControl()
         {
             InitializeComponent();
-            WeakReferenceMessenger.Default.Register(this);
             this.DataContext = new HalconDisplayControlViewModel();
+
+            WeakReferenceMessenger.Default.Register(this);
         }
         public void Receive(ImageLoadedMessage message)
         {
