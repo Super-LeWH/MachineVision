@@ -22,10 +22,12 @@
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" FontSize="{StaticResource FontSizeNormal}">
             <MenuItem Header="文件">
-                <MenuItem Header="新建项目" />
-                <MenuItem Header="打开项目" />
+                <MenuItem Header="新建项目" Command="{Binding NewProjectCommand}" />
+                <MenuItem Header="打开项目" Command="{Binding OpenProjectCommand}" />
                 <Separator />
                 <MenuItem Header="退出应用" Command="{Binding ExitCommand}" />
+            </MenuItem>
+            <MenuItem Header="通讯" Command="{Binding ConfigCommunicateCommand}">
             </MenuItem>
         </Menu>
         <Grid Grid.Row="1">

@@ -30,5 +30,22 @@ namespace MachineVisionSatrt.ViewModel
             }
         }
 
+        [RelayCommand]
+        private void ConfigCommunicate()
+        {
+            MessageBox.Show("配置通讯");
+        }
+
+        [RelayCommand]
+        private void NewProject()
+        {
+            MessageBox.Show("新建项目");
+        }
+
+        [RelayCommand]
+        private void OpenProject()
+        {
+            MessageBox.Show("打开项目");
+        }
     }
 }
