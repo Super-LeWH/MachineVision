@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Logging\Logging.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageProcessing", "ImageProcessing\ImageProcessing.csproj", "{91CC2E5C-5FFC-4C4A-B0C9-B6ABD61BEF90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{AA0D1A34-7164-41D0-8B17-AFF8254DA227}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{91CC2E5C-5FFC-4C4A-B0C9-B6ABD61BEF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91CC2E5C-5FFC-4C4A-B0C9-B6ABD61BEF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91CC2E5C-5FFC-4C4A-B0C9-B6ABD61BEF90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA0D1A34-7164-41D0-8B17-AFF8254DA227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA0D1A34-7164-41D0-8B17-AFF8254DA227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA0D1A34-7164-41D0-8B17-AFF8254DA227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA0D1A34-7164-41D0-8B17-AFF8254DA227}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:MachineVisionSatrt"
         xmlns:image_process="clr-namespace:ImageProcessing.View;assembly=ImageProcessing"
         xmlns:logging="clr-namespace:Logging.View;assembly=Logging"
+        xmlns:utils_ui="clr-namespace:Utils.View;assembly=Utils"
         mc:Ignorable="d"
         MinWidth="1120"
         MinHeight="630"
@@ -36,6 +37,7 @@
                     <image_process:HalconDisplayControl />
                 </TabItem>
                 <TabItem Header="工位-2">
+                    <utils_ui:FilesDeal></utils_ui:FilesDeal>
                 </TabItem>
             </TabControl>
         </Grid>
